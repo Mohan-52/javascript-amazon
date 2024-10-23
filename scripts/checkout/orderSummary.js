@@ -50,7 +50,7 @@ const dateString = calculateDeliveryDate(deliveryOption);
          ${matchingProduct.name}
         </div>
         <div class="product-price">
-         $${formatCurrency(matchingProduct.priceCents)}
+         ${matchingProduct.getPrice()}
         </div>
         <div class="product-quantity">
           <span>
