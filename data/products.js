@@ -118,12 +118,13 @@ export function loadProductsFetch(){
   
     console.log('load products');
   
-    
-  
-    });
+  }).catch(()=>{
+    console.log('Unexcepted Error. Please try again latter.');
+  });
 
     return promise;
 }
+
 /* loadProductsFetch().then(()=>{
   console.log('next step');
 
@@ -154,13 +155,20 @@ export function loadProducts(fun){
 
  });
 
+ xhr.addEventListener('error',(error)=>{
+  console.log('Unexcepted Error. Please try again latter.');
+});
 
 
  xhr.open('GET','https://supersimplebackend.dev/products');
  xhr.send();
+
+
 }
 
-loadProducts();
+
+
+
 
 /* export const products = [
   {
